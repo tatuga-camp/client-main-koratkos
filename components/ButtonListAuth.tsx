@@ -25,7 +25,7 @@ function ButtonListAuth() {
       >
         <Farmer />
         <span className="text-white font-medium">
-          ลงทะเบียนสำหรับ เกษตรกรใหม่
+          ลงทะเบียน สำหรับเกษตรกรใหม่
         </span>
       </Link>
 
