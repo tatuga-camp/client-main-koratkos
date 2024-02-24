@@ -7,9 +7,8 @@ function ButtonListAuth() {
     Swal.fire({
       title: "กำลังโหลด...",
       html: "กรุณารอสักครู่",
-      allowEscapeKey: false,
-      allowEnterKey: false,
-      allowOutsideClick: false,
+      timer: 5000,
+      timerProgressBar: true,
       didOpen: () => {
         Swal.showLoading();
       },
@@ -19,7 +18,7 @@ function ButtonListAuth() {
     <>
       <Link
         onClick={handleShowLoading}
-        href={process.env.NEXT_PUBLIC_FARMER_ROUTE as string}
+        href={`${process.env.NEXT_PUBLIC_FARMER_ROUTE as string}/auth/sign-up`}
         className="flex justify-center hover:scale-110 transition  ring-super-main-color
         duration-100 active:ring-2  bg-main-color btn-hoever p-2 py-1 rounded-full items-center gap-2"
       >
@@ -31,7 +30,7 @@ function ButtonListAuth() {
 
       <Link
         onClick={handleShowLoading}
-        href={process.env.NEXT_PUBLIC_FARMER_ROUTE as string}
+        href={`${process.env.NEXT_PUBLIC_FARMER_ROUTE as string}`}
         className="flex justify-center min-h-11 hover:scale-110 transition ring-super-main-color 
         duration-100 active:ring-2 bg-third-color p-2 py-1 rounded-full items-center gap-2"
       >
