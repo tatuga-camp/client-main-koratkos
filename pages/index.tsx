@@ -6,7 +6,7 @@ import Head from "next/head";
 
 function HomePage() {
   return (
-    <div className="flex flex-col h-screen justify-center items-center bg-fourth-color lg:flex-row">
+    <div className="flex overflow-hidden flex-col h-screen justify-center items-center bg-fourth-color lg:flex-row">
       <Head>
         <meta
           property="og:title"
