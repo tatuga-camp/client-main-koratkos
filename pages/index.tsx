@@ -62,7 +62,7 @@ function HomePage() {
       <div className="bottom-0 absolute lg:hidden right-0 left-0 m-auto z-10">
         <Backgroud />
       </div>
-      <div className="w-8/12 h-full relative hidden lg:block">
+      <div className="w-full h-full relative hidden lg:block">
         <div className="w-full h-full relative z-10  bg-gradient-to-l from-5% to-80% from-fourth-color"></div>
         <Image
           src="https://storage.googleapis.com/koratkos-stroage/public/backgroud-farm.jpg"
@@ -73,7 +73,10 @@ function HomePage() {
           alt="background"
         />
       </div>
-      <div className="font-Anuphan relative z-20 bg-transparent gap-4 md:gap-10= flex flex-col items-center justify-center">
+      <div
+        className="font-Anuphan lg:mr-20  relative z-20 bg-transparent gap-4 md:gap-10
+       flex flex-col items-center justify-center"
+      >
         <header className="flex flex-col items-center justify-center">
           <section className="flex justify-center items-end gap-2">
             <h2 className="font-bold text-xl text-super-main-color">
