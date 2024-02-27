@@ -6,7 +6,7 @@ import Head from "next/head";
 
 function HomePage() {
   return (
-    <div className="flex overflow-hidden flex-col h-screen justify-center items-center bg-fourth-color lg:flex-row">
+    <div className="flex  flex-col h-screen  justify-center items-center bg-fourth-color lg:flex-row">
       <Head>
         <meta
           property="og:title"
@@ -59,9 +59,6 @@ function HomePage() {
         />
         <meta charSet="UTF-8" />
       </Head>
-      <div className="bottom-0 absolute lg:hidden right-0 left-0 m-auto z-10">
-        <Backgroud />
-      </div>
       <div className="w-full h-full relative hidden lg:block">
         <div className="w-full h-full relative z-10  bg-gradient-to-l from-5% to-80% from-fourth-color"></div>
         <Image
