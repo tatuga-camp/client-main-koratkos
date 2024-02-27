@@ -8,6 +8,10 @@ function generateSiteMap() {
     <loc>https://koratkos.org</loc>
 <lastmod>2024-02-26</lastmod>
     </url>
+    <url>
+    <loc>https://admin.koratkos.org</loc>
+<lastmod>2024-02-26</lastmod>
+    </url>
   </urlset>
  `;
 }
