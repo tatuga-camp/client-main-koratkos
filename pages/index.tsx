@@ -3,6 +3,7 @@ import { backgroundImageBase64 } from "../data/base64Images";
 import { ButtonListAuth } from "../components/ButtonListAuth";
 import { Backgroud } from "../components/svgs/Backgroud";
 import Head from "next/head";
+import { sponsors } from "../data/menu";
 
 function HomePage() {
   return (
@@ -71,34 +72,73 @@ function HomePage() {
         />
       </div>
       <div
-        className="font-Anuphan lg:mr-20  relative z-20 bg-transparent gap-4 md:gap-10
-       flex flex-col items-center justify-center"
+        className="font-Anuphan lg:mr-20 pt-5 pb-5  relative z-20 bg-transparent gap-4 md:gap-10
+       flex flex-col items-center justify-between h-full"
       >
-        <header className="flex flex-col items-center justify-center">
-          <section className="flex justify-center items-end gap-2">
-            <h2 className="font-bold text-xl text-super-main-color">
-              WELCOME TO
-            </h2>
-            <div className="w-20 h-20 relative">
-              <Image src="/favicon.ico" fill alt="icon" />
-            </div>
-          </section>
-          <section className="flex w-11/12 md:w-max flex-col justify-center items-center">
-            <h1 className="text-6xl font-extrabold text-main-color">
-              Korat KOS
-            </h1>
+        <ul className="w-full flex justify-center items-center gap-2">
+          {sponsors.map((sponsor, index) => {
+            return (
+              <li
+                key={index}
+                className=" overflow-hidden relative  rounded-full w-10 h-10"
+              >
+                <Image
+                  alt="logo"
+                  src={sponsor.url}
+                  fill
+                  blurDataURL={backgroundImageBase64}
+                  placeholder="blur"
+                  className="object-cover"
+                />
+              </li>
+            );
+          })}
+        </ul>
+        <div className="w-11/12 lg:w-8/12  flex flex-col gap-5">
+          <header className="flex flex-col items-center justify-center">
+            <section className="flex justify-center items-end gap-2">
+              <h2 className="font-bold text-xl text-super-main-color">
+                WELCOME TO
+              </h2>
+              <div className="w-20 h-20 relative">
+                <Image src="/favicon.ico" fill alt="icon" />
+              </div>
+            </section>
+            <section className="flex w-11/12 md:w-max flex-col justify-center items-center">
+              <h1 className="text-6xl font-extrabold text-main-color">
+                Korat KOS
+              </h1>
 
-            <span className="text-center font-normal text-main-color tre text-xl leading-6 md:leading-9">
-              ระบบสมัครขอรับการตรวจประเมิน มาตรฐานเกษตรอินทรีย์ขั้นพื้นฐาน
-            </span>
-            <span className="text-center font-medium text-super-main-color  text-xl leading-6">
-              จังหวัดนครราชสีมา
-            </span>
-          </section>
-        </header>
-        <main className="flex flex-col gap-3">
-          <ButtonListAuth />
-        </main>
+              <span className="text-center font-normal text-main-color tre text-xl leading-6 md:leading-9">
+                ระบบสมัครขอรับการตรวจประเมิน มาตรฐานเกษตรอินทรีย์ขั้นพื้นฐาน
+              </span>
+              <span className="text-center font-medium text-super-main-color  text-xl leading-6">
+                จังหวัดนครราชสีมา
+              </span>
+            </section>
+          </header>
+          <main className="flex flex-col gap-3">
+            <ButtonListAuth />
+          </main>
+        </div>
+        <footer className="flex w-full justify-center gap-2 items-center">
+          <span>develop & maintain by</span>
+          <a
+            target="_blank"
+            href="https://www.tatugacamp.com"
+            className="w-20 h-8 bg-transparent hover:scale-105 transition duration-100
+              rounded-md overflow-hidden drop-shadow-lg relative"
+          >
+            <Image
+              alt="logo"
+              src="/logo/tatugacamp.jpg"
+              fill
+              blurDataURL={backgroundImageBase64}
+              placeholder="blur"
+              className="object-cover"
+            />
+          </a>
+        </footer>
       </div>
     </div>
   );
