@@ -1,25 +1,18 @@
 import "@/styles/globals.css";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import type { AppProps } from "next/app";
-import { useState } from "react";
+import { Anuphan } from "next/font/google";
+
+// Self-hosted at build time, so no render-blocking request to Google Fonts.
+const anuphan = Anuphan({
+  subsets: ["thai", "latin"],
+  display: "swap",
+  variable: "--font-anuphan",
+});
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [queryClient] = useState(
-    () =>
-      new QueryClient({
-        defaultOptions: {
-          queries: {
-            staleTime: 1000 * 6,
-            refetchInterval: 1000 * 6,
-          },
-        },
-      })
-  );
   return (
-    <QueryClientProvider client={queryClient}>
-      <ReactQueryDevtools initialIsOpen={false} />
+    <div className={`${anuphan.variable} font-Anuphan`}>
       <Component {...pageProps} />
-    </QueryClientProvider>
+    </div>
   );
 }
