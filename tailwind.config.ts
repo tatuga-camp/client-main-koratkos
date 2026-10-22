@@ -21,7 +21,7 @@ const config: Config = {
         "fourth-color": "#FFFFEC",
       },
       fontFamily: {
-        Anuphan: ["Anuphan", "sans-serif"],
+        Anuphan: ["var(--font-anuphan)", "Anuphan", "sans-serif"],
       },
     },
   },
